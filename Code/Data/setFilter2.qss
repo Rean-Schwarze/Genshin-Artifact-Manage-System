@@ -1,0 +1,64 @@
+QComboBox
+{
+  color:#495366;
+  font: 10pt "汉仪文黑-85W";
+  background-color: #ece5d8;
+  padding: 1px 1px 1px 15px;
+  border:1px solid rgba(228,228,228,1);
+  border-radius:15px;
+}
+
+QComboBox::drop-down 
+{
+  background-color: transparent;
+}
+
+QComboBox QAbstractItemView
+{
+	background:#3d4556;
+  border:1px solid rgba(228,228,228,1);
+  border-radius:0px 0px 5px 5px;
+  outline: 0px;
+}
+
+QComboBox QAbstractItemView::item
+{
+	height:31px;
+  font: 10pt "汉仪文黑-85W";
+	color:#ece5d8;
+	padding-left:9px;
+	background-color:#3d4556;
+}
+QComboBox QAbstractItemView::item:hover
+{
+  background-color:#e1dbd0;
+  color:#495366;
+}
+
+QComboBox QAbstractItemView::item:selected
+{
+  background-color:#e1dbd0;
+  color:#495366;
+}
+
+/******** combobox 滚动条  *********/
+QComboBox QScrollBar::vertical{ /*主体部分*/
+  width:4px;
+  background:rgb(89,89,89);
+  border:none;
+  border-radius:5px;
+}
+QComboBox QScrollBar::handle::vertical{ /*滑块主体*/
+  border-radius:5px;
+  width: 4px;
+  background:rgb(173,173,173);
+}
+QComboBox QScrollBar::handle::vertical::hover{
+  background:#e1dbd0;
+}
+QComboBox QScrollBar::add-line::vertical{/*上箭头*/
+  border:none;
+}
+QComboBox QScrollBar::sub-line::vertical{/*下箭头*/
+  border:none;
+}
