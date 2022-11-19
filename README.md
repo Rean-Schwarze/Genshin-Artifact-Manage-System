@@ -1,4 +1,4 @@
-# Genshin-Artifact-Manage-System
+# Genshin Artifact Manage System
 
 This is a management system for the artifact of Genshin Impact.  
 It's a project of my c++ course design which finished with my roommate in July, 2022.  
@@ -24,4 +24,4 @@ Link: https://github.com/wormtql/yas
 ### Enjoy!
 
 ## Attention  
-In CMakeLists.txt, I commented out the line of "Resources.qrc" because it can improve the speed of compilation.  
+In "CMakeLists.txt", I commented out the line of "Resources.qrc" because it can improve the speed of compilation.  
