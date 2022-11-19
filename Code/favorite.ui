@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Favorite</class>
+ <widget class="QWidget" name="Favorite">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QScrollArea" name="artifactArea">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>300</width>
+     <height>420</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="artifact">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>300</width>
+      <height>420</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QScrollBar" name="verticalScrollBar">
+     <property name="geometry">
+      <rect>
+       <x>296</x>
+       <y>0</y>
+       <width>4</width>
+       <height>420</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* 设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:4px;
+    background:#515151;
+    margin:0px,0px,0px,0px;
+    padding-top:4px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:4px;
+}
+QScrollBar::handle:vertical
+{
+    width:4px;
+    background:white;
+    border-radius:4px;   /* 滚动条两端变成椭圆 */
+    min-height:20;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:4px;
+    background:white;   /* 鼠标放到滚动条上的时候，颜色变深*/
+    border-radius:4px;
+    min-height:20;
+}
+QScrollBar::add-line:vertical   /* 这个应该是设置下箭头的，3.png就是箭头*/
+{
+    border:none;
+}
+QScrollBar::sub-line:vertical   /* 设置上箭头*/
+{
+    border:none;
+}</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QScrollArea" name="detailArea">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>60</y>
+     <width>196</width>
+     <height>420</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="detail">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>196</width>
+      <height>420</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="name">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>3</y>
+       <width>170</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="position">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>30</y>
+       <width>35</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #dbdbdb;
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ma">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>50</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 25);
+padding-left:4px;
+border-top-left-radius:2px;
+border-bottom-left-radius:2px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mav">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>50</y>
+       <width>85</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 25);
+padding-left:4px;
+border-top-right-radius:2px;
+border-bottom-right-radius:2px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="level">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>100</y>
+       <width>28</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0, 76);
+border-radius:2px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sa1">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>120</y>
+       <width>200</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 255, 255, 191);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sa2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>141</y>
+       <width>200</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 255, 255, 191);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sa3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>162</y>
+       <width>200</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 255, 255, 191);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sa4">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>183</y>
+       <width>200</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 255, 255, 191);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="setName">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>204</y>
+       <width>200</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #99ff88;
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="twoPieceSet">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>222</y>
+       <width>175</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>175</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>175</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 255, 255, 153);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="fourPieceSet">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>243</y>
+       <width>175</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>175</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>175</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 255, 255, 153);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QScrollBar" name="verticalScrollBar_2">
+     <property name="geometry">
+      <rect>
+       <x>191</x>
+       <y>0</y>
+       <width>4</width>
+       <height>420</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* 设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:4px;
+    background:#515151;
+    margin:0px,0px,0px,0px;
+    padding-top:4px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:4px;
+}
+QScrollBar::handle:vertical
+{
+    width:4px;
+    background:white;
+    border-radius:4px;   /* 滚动条两端变成椭圆 */
+    min-height:20;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:4px;
+    background:white;   /* 鼠标放到滚动条上的时候，颜色变深*/
+    border-radius:4px;
+    min-height:20;
+}
+QScrollBar::add-line:vertical   /* 这个应该是设置下箭头的，3.png就是箭头*/
+{
+    height:4px;width:6px;
+    background-color: transparent;
+    border-image:url(:/Icon/down.png);
+    subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical   /* 设置上箭头*/
+{
+    height:4px;width:6px;
+	background-color: transparent;
+    border-image:url(:/Icon/up.png);
+    subcontrol-position:top;
+}
+QScrollBar::add-line:vertical:hover   /* 当鼠标放到下箭头上的时候*/
+{
+    height:4px;width:6px;
+    background-color: transparent;
+    border-image:url(:/Icon/down_selected.png);
+    subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical:hover  /* 当鼠标放到下箭头上的时候*/
+{
+    height:4px;width:6px;
+	background-color: transparent;
+    border-image:url(:/Icon/up_selected.png);
+    subcontrol-position:top;
+}</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="star">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>78</y>
+       <width>84</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent;
+border-image: url(:/Icon/5star.png)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="description">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>264</y>
+       <width>185</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>185</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>185</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>汉仪文黑-85W</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 255, 255, 153);
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="close">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>3</y>
+     <width>42</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+border-radius:31px;
+border-image: url(:/Icon/close.png)
+}
+
+QPushButton:pressed
+{
+border-image: url(:/Icon/close_selected.png)
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bg">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>540</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QScrollArea" name="favoriteArea">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>60</y>
+     <width>375</width>
+     <height>420</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="favorite">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>375</width>
+      <height>420</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QScrollBar" name="verticalScrollBar_3">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>0</y>
+       <width>4</width>
+       <height>420</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* 设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:4px;
+    background:#515151;
+    margin:0px,0px,0px,0px;
+    padding-top:4px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:4px;
+}
+QScrollBar::handle:vertical
+{
+    width:4px;
+    background:white;
+    border-radius:4px;   /* 滚动条两端变成椭圆 */
+    min-height:20;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:4px;
+    background:white;   /* 鼠标放到滚动条上的时候，颜色变深*/
+    border-radius:4px;
+    min-height:20;
+}
+QScrollBar::add-line:vertical   /* 这个应该是设置下箭头的，3.png就是箭头*/
+{
+    border:none;
+}
+QScrollBar::sub-line:vertical   /* 设置上箭头*/
+{
+    border:none;
+}</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="add">
+     <property name="geometry">
+      <rect>
+       <x>166</x>
+       <y>0</y>
+       <width>42</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;添加套装预设&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+background-color: transparent;
+border-radius:31px;
+border-image: url(:/Icon/plus.png)
+}
+
+QPushButton:pressed
+{
+border-image: url(:/Icon/plus_selected.png)
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="flower">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>55</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="feather">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>0</y>
+     <width>55</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sand">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>0</y>
+     <width>55</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cup">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>0</y>
+     <width>55</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="head">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>0</y>
+     <width>55</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="equip">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>495</y>
+     <width>84</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+border-radius:31px;
+border-image: url(:/Icon/equip.png)
+}
+
+QPushButton:pressed
+{
+border-image: url(:/Icon/equip_selected.png)
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Save">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>10</y>
+     <width>42</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>汉仪文黑-85W</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;保存到文件&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;保存&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*按钮普通态*/
+QPushButton
+{
+	/*字体为微软雅黑*/
+    font-family:汉仪文黑-85W;
+    /*字体大小为20点*/
+    font-size:15pt;
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:transparent;
+    /*边框圆角半径为25像素*/ 
+    border-radius:21px;
+	border-image: url(:/Icon/save.png)
+}
+
+/*按钮停留态*/
+/*QPushButton:hover
+{
+    /*背景颜色*/  
+    /*background-color: #ecf5ff;
+	/*字体颜色*/  
+    /*color: #409eff;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:transparent;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+	border-image: url(:/Icon/save_selected.png)
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_2">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>480</y>
+     <width>42</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;删除/修改预设&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background-color: transparent;
+border-radius:31px;
+border-image: url(:/Icon/tool.png)
+}
+
+QPushButton:pressed
+{
+border-image: url(:/Icon/tool_selected.png)
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>bg</zorder>
+  <zorder>artifactArea</zorder>
+  <zorder>detailArea</zorder>
+  <zorder>close</zorder>
+  <zorder>favoriteArea</zorder>
+  <zorder>flower</zorder>
+  <zorder>feather</zorder>
+  <zorder>sand</zorder>
+  <zorder>cup</zorder>
+  <zorder>head</zorder>
+  <zorder>equip</zorder>
+  <zorder>Save</zorder>
+  <zorder>delete_2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

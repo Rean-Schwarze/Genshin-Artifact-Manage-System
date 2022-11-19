@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImportWidget</class>
+ <widget class="QWidget" name="ImportWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>导入</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(240,240,240);</string>
+  </property>
+  <widget class="QPushButton" name="ImportFromScan">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>200</y>
+     <width>300</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*按钮普通态*/
+QPushButton
+{
+	/*字体为微软雅黑*/
+    font-family:汉仪文黑-85W;
+    /*字体大小为20点*/
+    font-size:40pt;
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:rgb(255 , 255 , 255);
+    /*边框圆角半径为10像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color: #ecf5ff;
+	/*字体颜色*/  
+    color: #409eff;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:rgb(255 , 255 , 255);
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+   </property>
+   <property name="text">
+    <string>从扫描结果
+导入</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ImportManully">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>200</y>
+     <width>300</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*按钮普通态*/
+QPushButton
+{
+	/*字体为微软雅黑*/
+    font-family:汉仪文黑-85W;
+    /*字体大小为20点*/
+    font-size:40pt;
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:rgb(255 , 255 , 255);
+    /*边框圆角半径为10像素*/ 
+    border-radius:10px;
+}
+
+/*按钮停留态*/
+QPushButton:hover
+{
+    /*背景颜色*/  
+    background-color: #ecf5ff;
+	/*字体颜色*/  
+    color: #409eff;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:rgb(255 , 255 , 255);
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+}</string>
+   </property>
+   <property name="text">
+    <string>手动
+导入</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Back">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>3</y>
+     <width>42</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>汉仪文黑-85W</family>
+     <pointsize>25</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*按钮普通态*/
+QPushButton
+{
+	/*字体为微软雅黑*/
+    font-family:汉仪文黑-85W;
+    /*字体大小为20点*/
+    font-size:25pt;
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:transparent;
+    /*边框圆角半径为25像素*/ 
+    border-radius:21px;
+	border-image: url(:/Icon/close.png)
+}
+
+/*按钮停留态*/
+/*QPushButton:hover*/
+/*{*/
+    /*背景颜色*/  
+    /*background-color: #ecf5ff;*/
+	/*字体颜色*/  
+    /*color: #409eff;*/
+/*}*/
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*字体颜色为黑色*/    
+    color:black;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+	border-image: url(:/Icon/close_selected.png)
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Save">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>3</y>
+     <width>42</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>汉仪文黑-85W</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;保存&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;保存&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*按钮普通态*/
+QPushButton
+{
+	/*字体为微软雅黑*/
+    font-family:汉仪文黑-85W;
+    /*字体大小为20点*/
+    font-size:15pt;
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:transparent;
+    /*边框圆角半径为25像素*/ 
+    border-radius:21px;
+	border-image: url(:/Icon/save.png)
+}
+
+/*按钮停留态*/
+/*QPushButton:hover
+{
+    /*背景颜色*/  
+    /*background-color: #ecf5ff;
+	/*字体颜色*/  
+    /*color: #409eff;
+}
+
+/*按钮按下态*/
+QPushButton:pressed
+{
+    /*字体颜色为黑色*/    
+    color:black;
+    /*背景颜色*/  
+    background-color:transparent;
+    /*左内边距为3像素，让按下时字向右移动3像素*/  
+    padding-left:3px;
+    /*上内边距为3像素，让按下时字向下移动3像素*/  
+    padding-top:3px;
+	border-image: url(:/Icon/save_selected.png)
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bg">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>540</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>9</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>汉仪文黑-85W</family>
+     <pointsize>10</pointsize>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+color: rgb(211, 188, 142);</string>
+   </property>
+   <property name="text">
+    <string>导入圣遗物</string>
+   </property>
+  </widget>
+  <zorder>bg</zorder>
+  <zorder>ImportFromScan</zorder>
+  <zorder>ImportManully</zorder>
+  <zorder>Back</zorder>
+  <zorder>Save</zorder>
+  <zorder>text</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
