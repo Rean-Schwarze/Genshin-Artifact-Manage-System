@@ -24,4 +24,6 @@ Link: https://github.com/wormtql/yas
 ### Enjoy!
 
 ## Attention  
-In "CMakeLists.txt", I commented out the line of "Resources.qrc" because it can improve the speed of compilation.  
+1. In "CMakeLists.txt", I commented out the line of "Resources.qrc" because it can improve the speed of compilation.  
+2. Other resources and the program's download link：https://pan.baidu.com/s/1zwJWU4oHAYDJmTBugtFGuA?pwd=3d7j
+(Because github can't upload over 100 files at one time. Decompress to the path where the codes are.)
