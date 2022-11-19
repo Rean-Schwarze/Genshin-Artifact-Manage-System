@@ -4,12 +4,18 @@ This is a management system for the artifact of Genshin Impact.
 It's a project of my c++ course design which finished with my roommate in July, 2022.  
 
 ## Function  
+![image](https://user-images.githubusercontent.com/19246285/202847182-be87947f-da19-4eb1-968b-379aa455ba1a.png)
 ### Import your artifacts from the game  
 (Only 1 account and only artifacts in level 20, because I'm lazy...)  
+![image](https://user-images.githubusercontent.com/19246285/202847219-75432c16-b385-423b-87b4-cdb207dd3e20.png)
 ### Import artifacts manually  
+![image](https://user-images.githubusercontent.com/19246285/202847258-58114242-eb58-4a2e-b65e-ca69b66a64a0.png)
 ### Display all the artifact imported like the game  
+![image](https://user-images.githubusercontent.com/19246285/202847280-629f6110-b50b-4e7f-951c-3e66e902187e.png)
 ### Create your favorite set of artifacts  
+![image](https://user-images.githubusercontent.com/19246285/202847297-e888380f-0cab-4705-a95b-5b6c0b08c7ba.png)
 ### Rate based on the set of artifacts, the character and the weapon selected  
+![image](https://user-images.githubusercontent.com/19246285/202847355-d5eebbb0-46ec-463d-8091-f521619f78db.png)
 
 ## Before using  
 ### Install the font  
