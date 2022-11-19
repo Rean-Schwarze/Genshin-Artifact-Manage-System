@@ -22,3 +22,6 @@ Link: https://github.com/wormtql/yas
 4. Press Enter in the yas.exe and you will get a file named "mona.json" in the same path of yas.exe  
 (You can also use yas.exe in cmd)  
 ### Enjoy!
+
+## Attention  
+In CMakeLists.txt, I commented out the line of "Resources.qrc" because it can improve the speed of compilation.  
